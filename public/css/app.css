@@ -525,6 +525,38 @@ input:invalid, textarea:invalid, select:invalid {
 /**
  * This injects any component classes registered by plugins.
  */
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
 /**
  * Here you would add any of your custom component classes; stuff that you'd
  * want loaded *before* the utilities so that the utilities could still
@@ -539,9 +571,6 @@ input:invalid, textarea:invalid, select:invalid {
  * This injects all of Tailwind's utility classes, generated based on your
  * config file.
  */
-.absolute {
-  position: absolute;
-}
 .relative {
   position: relative;
 }
@@ -558,14 +587,8 @@ input:invalid, textarea:invalid, select:invalid {
   margin-left: auto;
   margin-right: auto;
 }
-.mt-4 {
-  margin-top: 1rem;
-}
-.mr-4 {
-  margin-right: 1rem;
-}
-.mt-12 {
-  margin-top: 3rem;
+.mr-2 {
+  margin-right: 0.5rem;
 }
 .mt-6 {
   margin-top: 1.5rem;
@@ -597,29 +620,8 @@ input:invalid, textarea:invalid, select:invalid {
 .-ml-px {
   margin-left: -1px;
 }
-.mt-14 {
-  margin-top: 3.5rem;
-}
-.mr-8 {
-  margin-right: 2rem;
-}
-.mr-20 {
-  margin-right: 5rem;
-}
-.mt-16 {
-  margin-top: 4rem;
-}
-.mr-2 {
-  margin-right: 0.5rem;
-}
-.mr-16 {
-  margin-right: 4rem;
-}
 .block {
   display: block;
-}
-.inline {
-  display: inline;
 }
 .flex {
   display: flex;
@@ -630,23 +632,20 @@ input:invalid, textarea:invalid, select:invalid {
 .hidden {
   display: none;
 }
-.h-16 {
-  height: 4rem;
-}
 .h-5 {
   height: 1.25rem;
-}
-.h-4 {
-  height: 1rem;
 }
 .h-8 {
   height: 2rem;
 }
+.h-16 {
+  height: 4rem;
+}
+.h-4 {
+  height: 1rem;
+}
 .min-h-screen {
   min-height: 100vh;
-}
-.w-auto {
-  width: auto;
 }
 .w-full {
   width: 100%;
@@ -654,20 +653,14 @@ input:invalid, textarea:invalid, select:invalid {
 .w-5 {
   width: 1.25rem;
 }
-.w-56 {
-  width: 14rem;
-}
-.w-4 {
-  width: 1rem;
-}
 .w-8 {
   width: 2rem;
 }
-.w-40 {
-  width: 10rem;
+.w-auto {
+  width: auto;
 }
-.w-48 {
-  width: 12rem;
+.w-4 {
+  width: 1rem;
 }
 .flex-1 {
   flex: 1 1 0%;
@@ -701,19 +694,6 @@ input:invalid, textarea:invalid, select:invalid {
 .justify-between {
   justify-content: space-between;
 }
-.justify-around {
-  justify-content: space-around;
-}
-.space-x-4 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(1rem * var(--tw-space-x-reverse));
-  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
-}
-.space-y-6 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
-}
 .rounded {
   border-radius: 0.25rem;
 }
@@ -730,9 +710,6 @@ input:invalid, textarea:invalid, select:invalid {
 }
 .border {
   border-width: 1px;
-}
-.border-b {
-  border-bottom-width: 1px;
 }
 .border-t {
   border-top-width: 1px;
@@ -764,9 +741,9 @@ input:invalid, textarea:invalid, select:invalid {
   --tw-bg-opacity: 1;
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
 }
-.bg-gray-500 {
+.bg-gray-900 {
   --tw-bg-opacity: 1;
-  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
 }
 .bg-white {
   --tw-bg-opacity: 1;
@@ -784,14 +761,6 @@ input:invalid, textarea:invalid, select:invalid {
   --tw-bg-opacity: 1;
   background-color: rgb(240 253 244 / var(--tw-bg-opacity));
 }
-.bg-gray-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
-}
-.bg-gray-900 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
-}
 .fill-current {
   fill: currentColor;
 }
@@ -806,6 +775,10 @@ input:invalid, textarea:invalid, select:invalid {
 .p-4 {
   padding: 1rem;
 }
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
 .py-12 {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -813,10 +786,6 @@ input:invalid, textarea:invalid, select:invalid {
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
-}
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
 }
 .py-4 {
   padding-top: 1rem;
@@ -852,9 +821,8 @@ input:invalid, textarea:invalid, select:invalid {
 .text-center {
   text-align: center;
 }
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
+.font-sans {
+  font-family: Inter var, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 .text-lg {
   font-size: 1.125rem;
@@ -868,40 +836,26 @@ input:invalid, textarea:invalid, select:invalid {
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
+.font-semibold {
+  font-weight: 600;
+}
 .font-extrabold {
   font-weight: 800;
 }
 .font-medium {
   font-weight: 500;
 }
-.font-semibold {
-  font-weight: 600;
-}
 .leading-loose {
   line-height: 2;
+}
+.leading-relaxed {
+  line-height: 1.625;
 }
 .leading-9 {
   line-height: 2.25rem;
 }
 .leading-5 {
   line-height: 1.25rem;
-}
-.leading-normal {
-  line-height: 1.5;
-}
-.leading-relaxed {
-  line-height: 1.625;
-}
-.tracking-wider {
-  letter-spacing: 0.05em;
-}
-.text-indigo-600 {
-  --tw-text-opacity: 1;
-  color: rgb(79 70 229 / var(--tw-text-opacity));
-}
-.text-gray-600 {
-  --tw-text-opacity: 1;
-  color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 .text-white {
   --tw-text-opacity: 1;
@@ -911,9 +865,17 @@ input:invalid, textarea:invalid, select:invalid {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
 }
+.text-indigo-600 {
+  --tw-text-opacity: 1;
+  color: rgb(79 70 229 / var(--tw-text-opacity));
+}
 .text-gray-900 {
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+.text-gray-600 {
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 .text-gray-700 {
   --tw-text-opacity: 1;
@@ -942,6 +904,10 @@ input:invalid, textarea:invalid, select:invalid {
 .text-green-800 {
   --tw-text-opacity: 1;
   color: rgb(22 101 52 / var(--tw-text-opacity));
+}
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .placeholder-gray-400::-moz-placeholder {
   --tw-placeholder-opacity: 1;
@@ -1006,13 +972,13 @@ input:invalid, textarea:invalid, select:invalid {
   --tw-bg-opacity: 1;
   background-color: rgb(99 102 241 / var(--tw-bg-opacity));
 }
-.hover\:text-indigo-500:hover {
-  --tw-text-opacity: 1;
-  color: rgb(99 102 241 / var(--tw-text-opacity));
-}
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.hover\:text-indigo-500:hover {
+  --tw-text-opacity: 1;
+  color: rgb(99 102 241 / var(--tw-text-opacity));
 }
 .hover\:text-indigo-600:hover {
   --tw-text-opacity: 1;
@@ -1114,14 +1080,11 @@ input:invalid, textarea:invalid, select:invalid {
   .md\:absolute {
     position: absolute;
   }
-  .md\:mt-16 {
-    margin-top: 4rem;
+  .md\:mt-14 {
+    margin-top: 3.5rem;
   }
   .md\:mr-16 {
     margin-right: 4rem;
-  }
-  .md\:mt-14 {
-    margin-top: 3.5rem;
   }
   .md\:flex {
     display: flex;
@@ -1153,20 +1116,16 @@ input:invalid, textarea:invalid, select:invalid {
   .md\:border-t-0 {
     border-top-width: 0px;
   }
+  .md\:bg-transparent {
+    background-color: transparent;
+  }
   .md\:bg-gray-700 {
     --tw-bg-opacity: 1;
     background-color: rgb(55 65 81 / var(--tw-bg-opacity));
   }
-  .md\:bg-gray-900 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(17 24 39 / var(--tw-bg-opacity));
-  }
-  .md\:bg-gray-600 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(75 85 99 / var(--tw-bg-opacity));
-  }
-  .md\:bg-transparent {
-    background-color: transparent;
+  .md\:py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
   .md\:py-4 {
     padding-top: 1rem;
@@ -1179,13 +1138,6 @@ input:invalid, textarea:invalid, select:invalid {
   .md\:py-2 {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-  }
-  .md\:py-0 {
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
-  .md\:pr-4 {
-    padding-right: 1rem;
   }
   .md\:leading-loose {
     line-height: 2;
