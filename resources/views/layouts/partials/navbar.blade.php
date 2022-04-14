@@ -41,7 +41,7 @@
                      class="top-0 right-0 block leading-relaxed md:py-2 md:bg-gray-700 md:rounded md:shadow md:w-40 md:mt-14 md:mr-16 md:absolute md:leading-loose">
                      <a href="" class="block px-4 text-gray-400 hover:text-white">Your Profile</a>
                      <a href="" class="block px-4 text-gray-400 hover:text-white">Your Friend</a>
-                     <a href="" class="block px-4 text-gray-400 hover:text-white">Settings</a>
+                     <a href="{{ route('settings') }}" class="block px-4 text-gray-400 hover:text-white">Settings</a>
                      <a href="{{ route('logout') }}"
                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
                         class="block px-4 text-gray-400 hover:text-white">
