@@ -12,6 +12,9 @@
                   </div>
                   <input type="file" name="picture" id="picture" wire:model="picture"
                      class="block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-violet-50 file:text-violet-700 hover:file:bg-violet-100">
+                  @error('picture')
+                     <span class="mt-2 text-sm text-red-500">{{ $message }}</span>
+                  @enderror
                </div>
 
                {{-- Username --}}
@@ -19,6 +22,9 @@
                   <label for="username" class="block text-sm font-medium text-slate-700">Username</label>
                   <input type="text" name="username" id="username" wire:model="username"
                      class="block w-full px-3 py-2 mt-1 text-sm bg-white border rounded-md shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500">
+                  @error('username')
+                     <span class="mt-2 text-sm text-red-500">{{ $message }}</span>
+                  @enderror
                </div>
 
                {{-- Name --}}
@@ -26,6 +32,9 @@
                   <label for="name" class="block text-sm font-medium text-slate-700">Name</label>
                   <input type="text" name="name" id="name" wire:model="name"
                      class="block w-full px-3 py-2 mt-1 text-sm bg-white border rounded-md shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500">
+                  @error('name')
+                     <span class="mt-2 text-sm text-red-500">{{ $message }}</span>
+                  @enderror
                </div>
 
                {{-- Button --}}

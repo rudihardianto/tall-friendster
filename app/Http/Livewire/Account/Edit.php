@@ -22,12 +22,20 @@ class Edit extends Component
         $this->name     = Auth::user()->name;
     }
 
+    public function updated($field)
+    {
+        $this->validateOnly($field, [
+            'username' => 'string|max:255|unique:users,username,' . Auth::id(),
+            'name'     => 'string|max:255',
+        ]);
+    }
+
     public function update()
     {
         $this->validate([
-            'picture'  => 'nullable|image|max:2048',
-            'username' => 'nullable|string|max:255|unique:users,username,' . Auth::user()->id,
-            'name'     => 'required|string|max:255',
+            'picture'  => $this->picture ? 'image|mimes:jpeg,png,jpg,gif,svg' : '',
+            'username' => 'required|min:5|max:25|unique:users,username,' . Auth::id(),
+            'name'     => 'required|string|min:5|max:255',
         ]);
 
         if ($this->picture) {
