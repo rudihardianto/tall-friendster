@@ -9,8 +9,7 @@
             <div class="text-gray-300 mb-5">
                {{ $user->description }}
             </div>
-            <x-button.primary>Follow</x-button.primary>
-            {{-- <x-button.error>Unfollow</x-button.error> --}}
+            <livewire:follow.button :user="$user" />
          </div>
       </div>
    </div>
