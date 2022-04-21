@@ -14,12 +14,13 @@ class Edit extends Component
     public $picture;
     public $username;
     public $name;
+    public $description;
 
     public function mount()
     {
-        $this->picture  = Auth::user()->picture;
-        $this->username = Auth::user()->username;
-        $this->name     = Auth::user()->name;
+        $this->username    = Auth::user()->username;
+        $this->name        = Auth::user()->name;
+        $this->description = Auth::user()->description;
     }
 
     public function updated($field)
@@ -46,14 +47,17 @@ class Edit extends Component
         }
 
         Auth::user()->update([
-            'picture'  => $picture,
-            'username' => $this->username,
-            'name'     => $this->name,
+            'picture'     => $picture,
+            'username'    => $this->username,
+            'name'        => $this->name,
+            'description' => $this->description,
         ]);
 
         session()->flash('message', 'Your account has been updated!');
 
-        return redirect()->route('settings');
+        $identifier = Auth::user()->usernameOrHash;
+
+        return redirect()->route('account.show', $identifier);
     }
 
     public function render()

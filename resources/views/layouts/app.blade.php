@@ -2,7 +2,7 @@
 
 @section('body')
    @include('layouts.partials.navbar')
-   <div class="py-6">
+   <div class="py-3">
       @yield('content')
    </div>
 

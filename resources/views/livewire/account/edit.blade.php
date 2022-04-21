@@ -37,12 +37,19 @@
                   @enderror
                </div>
 
+               {{-- Description --}}
+               <div class="mb-5">
+                  <label for="description" class="block text-sm font-medium text-slate-700">Bio</label>
+                  <textarea type="text" name="description" id="description" wire:model="description"
+                     class="block w-full px-3 py-2 mt-1 text-sm bg-white border rounded-md shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"></textarea>
+                  @error('description')
+                     <span class="mt-2 text-sm text-red-500">{{ $message }}</span>
+                  @enderror
+               </div>
+
                {{-- Button --}}
                <div class="flex justify-end">
-                  <button type="submit"
-                     class="flex justify-center px-4 py-2 text-sm font-medium text-white transition duration-150 ease-in-out bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:ring-indigo active:bg-indigo-700">
-                     Update
-                  </button>
+                  <x-button.primary>Update</x-button.primary>
                </div>
             </form>
          </div>
