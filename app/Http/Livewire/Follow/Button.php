@@ -18,11 +18,13 @@ class Button extends Component
     public function follow()
     {
         Auth::user()->follow($this->user);
+        $this->emit('followed');
     }
 
     public function unfollow()
     {
         Auth::user()->unfollow($this->user);
+        $this->emit('followed');
     }
 
     public function render()

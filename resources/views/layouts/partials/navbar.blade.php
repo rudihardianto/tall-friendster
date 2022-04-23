@@ -1,4 +1,4 @@
-<div class="bg-gray-800" x-data="{ open: false }">
+<div class="bg-gray-800 border-b border-gray-600" x-data="{ open: false }">
    <div class="flex flex-col items-center justify-between md:flex-row">
       <div class="flex justify-between w-full px-4 py-4 bg-gray-900 md:bg-transparent md:w-auto md:border-b-0">
          <div>
