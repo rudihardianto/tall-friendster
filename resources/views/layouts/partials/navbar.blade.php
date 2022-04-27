@@ -18,10 +18,10 @@
          </div>
       </div>
 
-      <div :class="{'hidden' : !open}" class="w-full py-1 leading-loose md:py-0 md:flex md:justify-between">
+      <div :class="{ 'hidden': !open }" class="w-full py-1 leading-loose md:py-0 md:flex md:justify-between">
          <div class="flex flex-col py-1 md:flex-row md:items-center md:py-0">
             <a href="#" class="block px-4 text-gray-400 hover:text-white md:py-4">Explore</a>
-            <a href="#" class="block px-4 text-gray-400 hover:text-white md:py-4">Timeline</a>
+            <a href="{{ route('timeline') }}" class="block px-4 text-gray-400 hover:text-white md:py-4">Timeline</a>
          </div>
 
          <div class="flex flex-col md:flex-row md:items-center">
@@ -37,7 +37,7 @@
                         </div>
                      </button>
                   </div>
-                  <div :class="{'md:hidden' : !dropdownIsOpen}"
+                  <div :class="{ 'md:hidden': !dropdownIsOpen }"
                      class="top-0 right-0 block leading-relaxed md:py-2 md:bg-gray-700 md:rounded md:shadow md:w-40 md:mt-14 md:mr-16 md:absolute md:leading-loose">
                      <a href="{{ route('account.show', Auth::user()->usernameOrHash) }}"
                         class="block px-4 text-gray-400 hover:text-white">
