@@ -1,6 +1,6 @@
 <div>
    @foreach ($statuses as $status)
-      <a href="" class="flex mt-3 mb-5">
+      <a href="" class="flex mt-3 mb-5" wire:poll>
          <div class="flex-shrink-0 mr-3">
             <img class="object-cover object-center w-10 h-10 rounded-full" src="{{ $status->user->gravatar() }}">
          </div>
