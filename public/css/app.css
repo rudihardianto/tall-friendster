@@ -598,6 +598,22 @@ input:invalid, textarea:invalid, select:invalid {
   margin-top: -0.5rem;
   margin-bottom: -0.5rem;
 }
+.-mx-3 {
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+}
+.mx-3 {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+.-mx-4 {
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
 .mr-2 {
   margin-right: 0.5rem;
 }
@@ -643,6 +659,27 @@ input:invalid, textarea:invalid, select:invalid {
 .-ml-px {
   margin-left: -1px;
 }
+.mr-4 {
+  margin-right: 1rem;
+}
+.mt-4 {
+  margin-top: 1rem;
+}
+.mr-1 {
+  margin-right: 0.25rem;
+}
+.-mt-2 {
+  margin-top: -0.5rem;
+}
+.-mt-1 {
+  margin-top: -0.25rem;
+}
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+.mb-8 {
+  margin-bottom: 2rem;
+}
 .block {
   display: block;
 }
@@ -676,6 +713,12 @@ input:invalid, textarea:invalid, select:invalid {
 .h-10 {
   height: 2.5rem;
 }
+.h-14 {
+  height: 3.5rem;
+}
+.h-6 {
+  height: 1.5rem;
+}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -703,6 +746,15 @@ input:invalid, textarea:invalid, select:invalid {
 .w-10 {
   width: 2.5rem;
 }
+.w-1\/2 {
+  width: 50%;
+}
+.w-14 {
+  width: 3.5rem;
+}
+.w-6 {
+  width: 1.5rem;
+}
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -728,6 +780,9 @@ input:invalid, textarea:invalid, select:invalid {
 }
 .flex-col {
   flex-direction: column;
+}
+.flex-wrap {
+  flex-wrap: wrap;
 }
 .items-start {
   align-items: flex-start;
@@ -940,6 +995,10 @@ input:invalid, textarea:invalid, select:invalid {
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
 .font-medium {
   font-weight: 500;
 }
@@ -1084,6 +1143,11 @@ input:invalid, textarea:invalid, select:invalid {
 .shadow-sm {
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-md {
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .transition {
