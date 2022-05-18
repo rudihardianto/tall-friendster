@@ -8,7 +8,14 @@ use Illuminate\Support\Facades\Auth;
 
 class Index extends Component
 {
-    public $perPage = 10;
+    public $statusId;
+    public $perPage      = 10;
+    protected $listeners = [
+        "statusCreated",
+    ];
+
+    public function statusCreated($statusId)
+    {}
 
     public function loadMore()
     {

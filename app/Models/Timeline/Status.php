@@ -11,16 +11,15 @@ class Status extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'hash',
+        'body',
+    ];
+
     protected static function newFactory()
     {
         return StatusFactory::new ();
     }
-
-    protected $fillable = [
-        'hash',
-        'user_id',
-        'body',
-    ];
 
     public function getPublishedAttribute()
     {
