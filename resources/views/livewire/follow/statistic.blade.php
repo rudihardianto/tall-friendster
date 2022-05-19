@@ -1,6 +1,6 @@
 <div class="text-gray-300 bg-gray-700">
    <div class="flex justify-center">
-      <div class="flex w-1/3">
+      <div class="flex w-full md:w-1/3">
          {{-- status --}}
          <div class="flex-1 py-2 text-center border-r border-gray-500">
             <div class="">Status</div>
