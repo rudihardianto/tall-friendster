@@ -15,7 +15,9 @@ use App\Http\Livewire\Status\Show as StatusShow;
 use App\Http\Controllers\Auth\EmailVerificationController;
 
 Route::view('/', 'welcome')->name('home');
-Route::get('timeline', TimelineController::class)->name('timeline');
+Route::middleware('auth')->group(function () {
+    Route::get('timeline', TimelineController::class)->name('timeline');
+});
 
 Route::get('settings', Edit::class)->name('settings')->middleware('auth');
 Route::get('user/{identifier}', Show::class)->name('account.show');
