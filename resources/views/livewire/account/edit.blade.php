@@ -21,7 +21,7 @@
                <div class="mb-5">
                   <label for="username" class="block text-sm font-medium text-slate-700">Username</label>
                   <input type="text" name="username" id="username" wire:model="username"
-                     class="block w-full px-3 py-2 mt-1 text-sm bg-white border rounded-md shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500">
+                     class="block w-full px-3 py-2 mt-1 text-sm bg-white border rounded-md shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500">
                   @error('username')
                      <span class="mt-2 text-sm text-red-500">{{ $message }}</span>
                   @enderror
@@ -31,7 +31,7 @@
                <div class="mb-5">
                   <label for="name" class="block text-sm font-medium text-slate-700">Name</label>
                   <input type="text" name="name" id="name" wire:model="name"
-                     class="block w-full px-3 py-2 mt-1 text-sm bg-white border rounded-md shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500">
+                     class="block w-full px-3 py-2 mt-1 text-sm bg-white border rounded-md shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500">
                   @error('name')
                      <span class="mt-2 text-sm text-red-500">{{ $message }}</span>
                   @enderror
@@ -41,7 +41,7 @@
                <div class="mb-5">
                   <label for="description" class="block text-sm font-medium text-slate-700">Bio</label>
                   <textarea type="text" name="description" id="description" wire:model="description"
-                     class="block w-full px-3 py-2 mt-1 text-sm bg-white border rounded-md shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"></textarea>
+                     class="block w-full px-3 py-2 mt-1 text-sm bg-white border rounded-md shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"></textarea>
                   @error('description')
                      <span class="mt-2 text-sm text-red-500">{{ $message }}</span>
                   @enderror
